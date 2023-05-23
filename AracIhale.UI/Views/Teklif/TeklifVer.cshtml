@@ -1,0 +1,11 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h2>Teklif Ver</h2>
+<form asp-action="TeklifVer" method="post">
+    <input type="number" name="teklif" step="0.01" placeholder="Teklif miktarını girin" required>
+    <button type="submit">Teklif Ver</button>
+</form>
+<p>@ViewBag.Message</p>

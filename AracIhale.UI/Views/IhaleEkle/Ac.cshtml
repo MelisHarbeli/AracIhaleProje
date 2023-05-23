@@ -1,0 +1,55 @@
+﻿@model AracIhale.UI.Models.DTO.IhaleDTO
+
+@{
+    ViewData["Title"] = "Ac";
+}
+
+
+<h1>Ac</h1>
+
+<h4>IhaleDTO</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form  asp-action="Ac" asp-controller="IhaleEkle">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IhaleAdi" class="control-label"></label>
+                <input asp-for="IhaleAdi" class="form-control" />
+                <span asp-validation-for="IhaleAdi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SirketId" class="control-label"></label>
+                <input asp-for="SirketId" class="form-control" />
+                <span asp-validation-for="SirketId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Statü" class="control-label"></label>
+                <input asp-for="Statü" class="form-control" />
+                <span asp-validation-for="Statü" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BaslangicTarih" class="control-label"></label>
+                <input asp-for="BaslangicTarih" class="form-control" />
+                <span asp-validation-for="BaslangicTarih" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BitisTarih" class="control-label"></label>
+                <input asp-for="BitisTarih" class="form-control" />
+                <span asp-validation-for="BitisTarih" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+            
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
